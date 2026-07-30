@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A little love letter for National Girlfriend Day."
+    />
+    <meta name="theme-color" content="#fbf5f0" />
+    <title>Happy Girlfriend Day, Emiera ♥</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Karla:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <canvas id="heart-canvas" aria-hidden="true"></canvas>
+
+    <button class="music-toggle" id="music-toggle" type="button" aria-pressed="false">
+      <span class="music-icon" aria-hidden="true">♪</span>
+      <span>Play music</span>
+    </button>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-glow hero-glow--one"></div>
+        <div class="hero-glow hero-glow--two"></div>
+        <p class="eyebrow">August 1 <span aria-hidden="true">·</span> National Girlfriend Day</p>
+        <h1 id="page-title">Happy Girlfriend Day,<br /><em>Nur Emiera Fifiyana</em></h1>
+        <p class="hero-copy">
+          The most beautiful, patient, funny, occasionally-steals-my-fries person I know.
+          This whole page is for you.
+        </p>
+        <div class="day-counter" aria-label="Days together since April 7, 2024">
+          <strong id="days-together">—</strong>
+          <span>days together <small>since April 7, 2024 — and counting</small></span>
+        </div>
+        <a class="scroll-cue" href="#letter" aria-label="Scroll to my letter">↓</a>
+      </section>
+
+      <section class="letter-section" id="letter" aria-labelledby="letter-title">
+        <p class="eyebrow">First things first</p>
+        <h2 id="letter-title">A letter, just for you</h2>
+
+        <button class="envelope" id="open-letter" type="button" aria-controls="love-letter" aria-expanded="false">
+          <span class="envelope-flap" aria-hidden="true"></span>
+          <span class="seal" aria-hidden="true">♥</span>
+          <span class="envelope-label">Tap to open</span>
+        </button>
+
+        <article class="love-letter" id="love-letter" hidden>
+          <p class="letter-greeting">My dearest Emiera,</p>
+          <p>
+            Happy National Girlfriend Day. Yes, it’s a real day. No, I did not make it
+            up as an excuse to tell you how much I love you — but I absolutely would have.
+          </p>
+          <p>
+            Every single day since April 7, 2024 has been better because you were in it.
+            You make the ordinary days feel special and the special days feel unforgettable.
+            Thank you for your patience, your laugh, your heart, and for choosing me over
+            and over again.
+          </p>
+          <p>
+            I don’t need a holiday to celebrate you — but since there is one, I’m going
+            to use it properly. Scroll on. This whole thing is yours.
+          </p>
+          <p class="letter-signoff">Love you so much,<br />your one and only ♥</p>
+        </article>
+      </section>
+
+      <section class="reasons section" aria-labelledby="reasons-title">
+        <header class="section-heading">
+          <p class="eyebrow">Just a few of the</p>
+          <h2 id="reasons-title">Reasons I love you</h2>
+          <p>Tap a card to flip it</p>
+        </header>
+        <div class="reason-grid">
+          <button class="reason-card" type="button" aria-pressed="false">
+            <span class="reason-card__inner">
+              <span class="reason-card__front"><b>01</b><span>Your laugh</span></span>
+              <span class="reason-card__back">The way you laugh at your own jokes before you even finish them. It’s my favorite sound in the world.</span>
+            </span>
+          </button>
+          <button class="reason-card" type="button" aria-pressed="false">
+            <span class="reason-card__inner">
+              <span class="reason-card__front"><b>02</b><span>Your heart</span></span>
+              <span class="reason-card__back">You care so deeply about everyone around you. Watching you love people makes me want to be better.</span>
+            </span>
+          </button>
+          <button class="reason-card" type="button" aria-pressed="false">
+            <span class="reason-card__inner">
+              <span class="reason-card__front"><b>03</b><span>Your patience</span></span>
+              <span class="reason-card__back">You put up with me. Every day. Voluntarily. That alone deserves an award.</span>
+            </span>
+          </button>
+          <button class="reason-card" type="button" aria-pressed="false">
+            <span class="reason-card__inner">
+              <span class="reason-card__front"><b>04</b><span>Our talks</span></span>
+              <span class="reason-card__back">Three-hour conversations that feel like ten minutes. I never run out of things to say to you.</span>
+            </span>
+          </button>
+          <button class="reason-card" type="button" aria-pressed="false">
+            <span class="reason-card__inner">
+              <span class="reason-card__front"><b>05</b><span>Your courage</span></span>
+              <span class="reason-card__back">You face hard things head-on and make it look easy. I’m so proud of you, always.</span>
+            </span>
+          </button>
+          <button class="reason-card" type="button" aria-pressed="false">
+            <span class="reason-card__inner">
+              <span class="reason-card__front"><b>06</b><span>Simply you</span></span>
+              <span class="reason-card__back">Not one specific thing. Just you, exactly as you are. I wouldn’t change a single detail.</span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="timeline-section" aria-labelledby="timeline-title">
+        <div class="timeline-wrap">
+          <header class="section-heading section-heading--light">
+            <p class="eyebrow">Our story so far</p>
+            <h2 id="timeline-title">A timeline of us</h2>
+          </header>
+          <ol class="timeline">
+            <li>
+              <div><time datetime="2024-04-07">April 7, 2024</time><h3>The day it all began</h3><p>The best yes of my life. Day one of the rest of everything.</p></div>
+            </li>
+            <li>
+              <div><time>Somewhere in between</time><h3>A thousand little moments</h3><p>First dates, late-night calls, shared meals, dumb arguments about nothing, and making up five minutes later.</p></div>
+            </li>
+            <li>
+              <div><time>Today</time><h3><span id="timeline-days">—</span> days strong</h3><p>Still my favorite person. Still choosing you. Every single day.</p></div>
+            </li>
+            <li>
+              <div><time>The future</time><h3>To be continued…</h3><p>This timeline doesn’t have an ending. That’s the whole point.</p></div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="gallery section" aria-labelledby="gallery-title">
+        <header class="section-heading">
+          <p class="eyebrow">Us, in pictures</p>
+          <h2 id="gallery-title">My favorite views</h2>
+        </header>
+        <div class="photo-grid">
+          <label class="photo-frame photo-frame--one" data-placeholder="A photo of us">
+            <input type="file" accept="image/*" />
+            <img alt="A favorite photo of us" />
+            <span class="photo-placeholder"><i>♡</i> Drop a photo of us</span>
+          </label>
+          <label class="photo-frame photo-frame--two" data-placeholder="A photo of her">
+            <input type="file" accept="image/*" />
+            <img alt="A favorite photo of her" />
+            <span class="photo-placeholder"><i>♡</i> Drop a photo of her</span>
+          </label>
+          <label class="photo-frame photo-frame--three" data-placeholder="A favorite memory">
+            <input type="file" accept="image/*" />
+            <img alt="A favorite shared memory" />
+            <span class="photo-placeholder"><i>♡</i> Drop a favorite memory</span>
+          </label>
+          <label class="photo-frame photo-frame--four" data-placeholder="A silly one">
+            <input type="file" accept="image/*" />
+            <img alt="A silly favorite photo" />
+            <span class="photo-placeholder"><i>♡</i> Drop a silly one</span>
+          </label>
+        </div>
+        <p class="gallery-note">Add your photos here before you send her the link.</p>
+      </section>
+
+      <section class="surprise-section" aria-labelledby="surprise-title">
+        <p class="eyebrow">One more thing…</p>
+        <div id="surprise-prompt">
+          <h2 id="surprise-title">I saved the best for last</h2>
+          <button class="button" id="reveal-surprise" type="button">Tap to reveal ♥</button>
+        </div>
+        <div class="surprise-message" id="surprise-message" hidden aria-live="polite">
+          <h2><span id="surprise-days">—</span> days down.<br /><em>Forever to go.</em></h2>
+          <p>Your real surprise isn’t on this page — check with me on August 1st. This is just the trailer. 😉</p>
+          <p class="letter-signoff">Love you so much,<br />Nur Emiera Fifiyana ♥</p>
+        </div>
+      </section>
+    </main>
+    <footer>Made with all my love <span aria-hidden="true">♥</span></footer>
+  </body>
+</html>
