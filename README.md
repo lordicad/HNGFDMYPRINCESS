@@ -2,6 +2,8 @@
 
 A static, interactive love-letter website made for Nur Emiera Fifiyana.
 
+The music button plays **New West — Those Eyes** from `assets/music/those-eyes.mp3`.
+
 ## Personalise the photos
 
 Open the site in a browser and click a gallery card to preview a photo. Those previewed photos are only stored in that browser session. For the photos to be visible to Emiera when she opens the deployed link, add image files to `assets/photos/` and update the four `<img>` tags in `index.html` with their relative paths, for example:

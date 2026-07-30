@@ -64,41 +64,18 @@ function setupSurprise() {
   });
 }
 
-let audioContext;
-let melodyTimer;
 let musicOn = false;
-
-function playNote(context, frequency, start, duration, type = "sine", gain = 0.12) {
-  const oscillator = context.createOscillator();
-  const volume = context.createGain();
-  oscillator.type = type;
-  oscillator.frequency.value = frequency;
-  volume.gain.setValueAtTime(0.0001, start);
-  volume.gain.exponentialRampToValueAtTime(gain, start + 0.025);
-  volume.gain.exponentialRampToValueAtTime(0.0001, start + duration);
-  oscillator.connect(volume).connect(context.destination);
-  oscillator.start(start);
-  oscillator.stop(start + duration + 0.05);
-}
 
 function setupMusic() {
   const button = document.querySelector("#music-toggle");
   const icon = button.querySelector(".music-icon");
   const label = button.querySelector("span:last-child");
-  const notes = [523.25, 659.25, 783.99, 987.77, 783.99, 659.25, 587.33, 698.46, 880, 1046.5, 880, 698.46];
-  let noteIndex = 0;
-
-  const play = () => {
-    const now = audioContext.currentTime;
-    const note = notes[noteIndex % notes.length];
-    playNote(audioContext, note, now, 1.25);
-    if (noteIndex % 4 === 0) playNote(audioContext, note / 2, now, 1.45, "triangle", 0.04);
-    noteIndex += 1;
-  };
+  const song = document.querySelector("#background-song");
+  song.volume = 0.45;
 
   button.addEventListener("click", async () => {
     if (musicOn) {
-      clearInterval(melodyTimer);
+      song.pause();
       musicOn = false;
       button.setAttribute("aria-pressed", "false");
       icon.textContent = "♪";
@@ -106,16 +83,15 @@ function setupMusic() {
       return;
     }
 
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContext) return;
-    audioContext ||= new AudioContext();
-    await audioContext.resume();
-    musicOn = true;
-    button.setAttribute("aria-pressed", "true");
-    icon.textContent = "♫";
-    label.textContent = "Music on";
-    play();
-    melodyTimer = window.setInterval(play, 480);
+    try {
+      await song.play();
+      musicOn = true;
+      button.setAttribute("aria-pressed", "true");
+      icon.textContent = "♫";
+      label.textContent = "Music on";
+    } catch {
+      label.textContent = "Unable to play";
+    }
   });
 }
 
@@ -194,5 +170,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("beforeunload", () => {
   window.cancelAnimationFrame(animationFrame);
-  clearInterval(melodyTimer);
 });
