@@ -6,7 +6,7 @@ The music button plays **New West — Those Eyes** from `assets/music/those-eyes
 
 ## Personalise the photos
 
-Open the site in a browser and click a gallery card to preview a photo. Those previewed photos are only stored in that browser session. For the photos to be visible to Emiera when she opens the deployed link, add image files to `assets/photos/` and update the four `<img>` tags in `index.html` with their relative paths, for example:
+Eight favourite photos are already bundled in `assets/photos/` and appear in the gallery on the deployed site. To replace one permanently, add your image to that folder and update the matching `<img>` tag in `index.html`, for example:
 
 ```html
 <img src="assets/photos/us-1.jpg" alt="A favorite photo of us" />
