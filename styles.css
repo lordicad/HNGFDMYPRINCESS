@@ -102,7 +102,7 @@ h2 { margin: 0; color: var(--ink); font-size: clamp(2rem, 4.5vw, 3rem); font-wei
 }
 .photo-frame { position: relative; display: flex; height: 340px; align-items: center; justify-content: center; overflow: hidden; border: 1px dashed #d8a7b0; border-radius: 14px; background: #f8e9e8; cursor: pointer; transition: transform .25s, border-color .25s, box-shadow .25s; }
 .photo-frame:nth-child(even) { transform: translateY(28px); }
-.photo-grid .photo-frame { height: 310px; transform: none; }
+.photo-grid .photo-frame { height: 310px; transform: none !important; }
 .photo-frame--portrait { order: 1; }
 .photo-frame--landscape { order: 2; height: 310px; transform: none !important; }
 .photo-frame:nth-child(1) { grid-area: landscape-day; }
