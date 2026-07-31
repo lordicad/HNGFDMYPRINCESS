@@ -7,7 +7,7 @@ function daysTogether() {
 
 function setDayCounters() {
   const days = daysTogether().toLocaleString();
-  document.querySelectorAll("#days-together, #timeline-days, #surprise-days").forEach((element) => {
+  document.querySelectorAll("#days-together, #timeline-days").forEach((element) => {
     element.textContent = days;
   });
 }
