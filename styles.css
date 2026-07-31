@@ -95,8 +95,8 @@ h2 { margin: 0; color: var(--ink); font-size: clamp(2rem, 4.5vw, 3rem); font-wei
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-template-areas:
-    "portrait-one portrait-two landscape-day landscape-day landscape-day portrait-three"
-    "portrait-four portrait-five landscape-night landscape-night landscape-night portrait-six";
+    "portrait-one portrait-two portrait-three portrait-four portrait-five portrait-six"
+    "landscape-day landscape-day landscape-day landscape-night landscape-night landscape-night";
   gap: 16px;
   padding-bottom: 28px;
 }
